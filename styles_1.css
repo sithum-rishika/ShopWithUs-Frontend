@@ -1,0 +1,770 @@
+/*E160333_WSRP_HARISCHANDRA_WEB_ASSIGNMENT01*/
+
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+ }
+        /*Body Styles*/
+        body {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            background: linear-gradient(to right, #ff00cc, #333399);
+            margin: 0;
+            background-position: center;
+        }
+
+/*---------------------------------------------------------------------Header Styles-------------------------------------------------------------*/
+
+    header {
+        background: linear-gradient(to right, #ff00cc, #333399);
+        width: 100%;
+        height: 75px;
+        padding: 10px 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: sticky;
+        top: 0;
+        left: 0%;
+        right: 0%;
+        z-index: 1000;
+        box-shadow: 0 0 27px black;
+    }
+
+        /*Header_Logo_Styles*/
+
+            .header_logo{
+                width: 15%;
+                display: flex;
+            }
+
+                .header_logo_text{
+                    color: white;
+                    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                    width: 100%;
+                    letter-spacing: 4px;
+                    font-size: 27px;
+                }
+
+                /*Header_SearchBar_And_it's_Button_Styles*/
+
+                    .header_search_bar{
+                        width: 35%;
+                        position: relative;
+                        display: flex;
+                        padding: 10px 10px;
+                        margin-left: 8%;
+                    }
+
+                        input[type=text]{
+                            width: 100%;
+                            border: 3px solid #00B4CC;
+                            border-right: none;
+                            padding: 5px;
+                            height: 36px;
+                            border-radius: 5px 0 0 5px;
+                            outline: none;
+                            color: linear-gradient(112.1deg, rgb(32, 38, 57) 11.4%, rgb(63, 76, 119) 70.2%);
+                            font-weight: 700;
+                            font-size: 14px;
+                            letter-spacing: 1px;
+                        }
+
+                            input[type=text]::placeholder{
+                                color:linear-gradient(to right, #ff00cc, #333399);
+                                font-weight: 700;
+                            }
+
+                                .search_bar_btn{
+                                    width: 40px;
+                                    height: 36px;
+                                    border: 1px solid #00B4CC;
+                                    background: #00B4CC;
+                                    text-align: center;
+                                    color: #fff;
+                                    border-radius: 0 5px 5px 0;
+                                    cursor: pointer;
+                                    font-size: 20px;
+                                }
+
+                                    .search_lgo{
+                                        width: 24px;
+                                    }
+
+                                        .search_btn:hover{
+                                            background-color: #333399;
+                                            transition-duration: 0.5s;
+                                            transition-delay: 0.2ms;
+                                            transform-style: preserve-3d;
+                                        }
+
+                                        /*Navigation_Links_Styles*/
+
+                                            .header_navigation_bar_div{
+                                                width: 22%;
+                                                display: flex;
+                                                float: right;
+                                                margin-right: 16%;
+                                                padding: 1%;
+                                                height: 5em;
+                                                align-items: center;
+                                            }
+
+                                                nav ul {
+                                                    list-style: none;
+                                                    padding: 0;
+                                                    display: flex;
+                                                }
+
+                                                    nav li {
+                                                        margin: 0 10px;
+                                                    }
+
+                                                        nav a {
+                                                            text-decoration: none;
+                                                            color: #fff;
+                                                            position: relative;
+                                                            display: block;
+                                                            letter-spacing: 2px;
+                                                            margin: 0 1px;
+                                                            width: 100%;
+                                                            font-size: 15px;
+                                                        }
+
+                                                            nav a:hover:before{
+                                                                content: "";
+                                                                position: absolute;
+                                                                left: 0;
+                                                                right: 0;
+                                                                bottom: -2px;
+                                                                height: 2px;
+                                                                background:red;
+
+                                                            }
+
+                                                                nav a:hover{
+                                                                    color:black;
+                                                                    transition-duration: 0.5s;
+                                                                    transition-delay: 0.3ms;
+                                                                    background-color: #fff;
+                                                                }
+
+                                                                /*Adding_Login_and_Signin_Buttons_to_The_Banner*/
+
+                                                                    .header_log_sign_btn{
+                                                                        width: 18%;
+                                                                        display: flex;
+                                                                        position: absolute;
+                                                                        justify-content: center;
+                                                                        margin-left: 80%;
+                                                                        padding: 2%;
+                                                                    }
+
+                                                                        .logsignbtn{
+                                                                            width: 75%;
+                                                                            padding: 1%;
+                                                                            margin-left: 6%;
+                                                                            color: purple;
+                                                                            font-weight: 800;
+                                                                            background: beige;
+                                                                            font-family: system-ui;
+                                                                            font-size: 16px;
+                                                                            border: 3px solid white;
+                                                                            border-radius: 11px;
+                                                                            text-align: center;
+                                                                            position: relative;
+                                                                            box-shadow: 0 0 8px black;
+                                                                            overflow: hidden;
+                                                                            height: 31px;
+                                                                        }
+
+                                                                            .logsignbtn:hover{
+                                                                                border:3px solid white;
+                                                                                background:linear-gradient(to right, #fbd72d, #f9484a);
+                                                                                overflow: hidden;
+                                                                                color:white;
+                                                                                transition-duration: 0.5s;
+                                                                                transform-style: preserve-3d;
+                                                                            }
+
+
+/*-----------------------------------------------------------Banner_Section_Styles--------------------------------------------------------------*/
+
+.banner {
+    width: 100%;
+    height: 406px;
+    background-image: url(images/Banner_image.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    z-index: -1;
+    box-shadow: 0 0 27px black;
+}
+
+    .banner::before{
+    
+        position: absolute;
+        top:0%;
+        left: 0%;
+        display: block;
+        width:100%;
+        height: 100%;
+        opacity: .7;
+    }
+
+        .banner_txt{
+            width: 30%;
+            padding: 20px;
+            text-align: left;
+            margin-left: 26px;
+            background-attachment: fixed;
+        }
+
+            .banner_logo{
+                width: 100%;
+                font-size: 44px;
+                color: crimson;
+                margin-top: 120px;
+                font-weight: bolder;
+                font-family: system-ui;
+                letter-spacing: 4px;
+            }
+
+                .banner_description{
+                    margin-top: -1%;
+                    font-size: 17px;
+                    font-weight: 800;
+                    font-family: Gill Sans (sans-serif);
+                    letter-spacing: 3px;
+                    width: 115%;
+                    padding: 4%;
+                    margin-left: -4%;
+                }
+
+                    .bnnner_button{
+                        width: 14%;
+                        padding: 10px;
+                        height: 50px;
+                        top: 0;
+                        margin-left: 44px;
+                    }
+
+                        .banner_button_shop_now{
+                            width: 100%;
+                            padding: 10px;
+                            height: 49px;
+                            font-size: 20px;
+                            font-family: system-ui;
+                            font-weight: 800;
+                            text-align: center;
+                            border: none;
+                            background-color: #18f98f;
+                            position: inherit;
+                            letter-spacing: 2px;
+                            transform: translate(-10px, 6px);
+                            margin-top: -7px;
+                            cursor:pointer;
+                            border-radius: 5px 5px 5px 5px;
+                            box-shadow: 0 0 8px black;
+                        }
+
+                            .banner_button_shop_now:hover{
+                                background-color: #333399;
+                                transition-duration: 0.5s;
+                                width: 107%;
+                                color:#fff;
+                                box-shadow: 0 0 8px black;
+                            }
+
+/*--------------------------------------------------------Category_Section_Styles---------------------------------------------------------------*/
+
+.category_title{
+    width: 100%;
+    float: left;
+    padding: 18px;
+    margin-top: 1%;
+}
+
+    .category_header{
+        text-align: center;
+        width: 100%;
+        padding: 16px;
+        font-size: 33px;
+        font-family: monospace;
+        font-weight: 700;
+        text-transform: uppercase;
+        text-shadow: 2px 0px red;
+        color: yellow;
+        letter-spacing: 2px;
+        box-shadow: 0 0 8px black;
+    }
+
+        .item_categories{
+            width: 100%;
+            display: flex;
+            margin-top: -2px;
+            align-items: center;
+            float: left;
+            height: 267px;
+        }
+
+            .category_content{
+                width: 24%;
+                margin-left: 12px;
+                height: 100%;
+            }
+
+                .category_img{
+                    opacity: 1;
+                    width: 100%;
+                    height: 92%;
+                    border-top-left-radius: 35px;
+                    border-top-right-radius: 35px;
+                    display: block;
+                    backface-visibility: hidden;
+                    box-shadow: 2px 5px 12px black;
+                }
+
+                    .category_type_name{
+                        width: 100%;
+                        text-align: center;
+                        padding: 3%;
+                        background: aliceblue;
+                        font-weight: 700;
+                        letter-spacing: 2px;
+                        font-family: system-ui;
+                        font-size: 15px;
+                        background: coral;
+                        box-shadow: 0px 0px 8px black;
+                    }
+
+                    /*Transparent_Category_Offers_Styles*/
+
+                        .category_offers_transparent{
+                                transition: .5s ease;
+                                display: flex;
+                                transform: translate(-50%, -50%);
+                                -ms-transform: translate(-50%, -50%);
+                                text-align: center;
+                                width: 229px;
+                                height: 106px;
+                                margin-left: 158px;
+                                margin-top: -106px;
+                                opacity: 0;
+                        }
+
+                            .category_offers_transparent_text{
+                                    color: white;
+                                    font-size: 32px;
+                                    padding: 8px 32px;
+                                    font-weight: 700;
+                                    margin-top: -55px;
+                                    margin-left: 14px;
+                                    width: 100%;
+                            }
+
+
+                                .category_content:hover .category_img {
+                                    opacity: 0.3;
+                                    transition-duration: 0.3s;
+                                }
+  
+                                    .category_content:hover .category_offers_transparent {
+                                        opacity: 1;
+                                        transition-duration: 0.3s;
+                                    }
+
+                                        .category_btn{
+                                            width: 100%;
+                                            padding: 7px;
+                                            border-bottom-left-radius: 35px;
+                                            border-bottom-right-radius: 35px;
+                                            font-size: 18px;
+                                            font-weight: 900;
+                                            border: none;
+                                            box-shadow: 0 0 8px black;
+                                            cursor: pointer;
+                                            background: linear-gradient(to right, #fbd72d, #f9484a);
+                                            text-align: center;
+                                            font-family: system-ui;
+                                        }
+
+                                            .category_btn:hover{
+                                                background-color: #333399;
+                                                transition-duration: 0.3s;
+                                                color: #fff;
+                                                box-shadow: 0 0 8px black;
+                                                overflow: hidden;
+                                                transform-style: preserve-3d;
+                                                margin-bottom: 4px;
+                                                letter-spacing: 2px;
+                                                border-top: 4px solid white;
+                                            }
+
+/*-------------------------------------------------Luxury Brand Partners logos Section Css------------------------------------------------------*/
+
+.brnd_dtls{
+    width: 100%;
+    float: left;
+    padding: 18px;
+    margin-top: 4%;
+}
+
+    .brnd_titles{
+        text-align: center;
+        width: 100%;
+        padding: 16px;
+        font-size: 33px;
+        font-family: monospace;
+        font-weight: 700;
+        text-transform: uppercase;
+        text-shadow: 2px 0px red;
+        color: yellow;
+        letter-spacing: 2px;
+        box-shadow: 0px 0px 8px black;
+    }
+
+        .brands{
+            width: 93%;
+            margin-top: -2%;
+            height: 223px;
+            margin-bottom: 7px;
+            display: flex;
+            padding: 20px;
+            margin-left: 47px;
+        }
+
+            .brnddiv{
+                width: 25%;
+                margin-left: 45px;
+                padding: 13px;
+            }
+
+                .brndimg{
+                    width: 100%;
+                    height: 157px;
+                    box-shadow: 0 0 10px black;
+                    margin-left: -25px;
+                }
+
+                    .brndimg:hover{
+                        width: 100%;
+                        height: 157px;
+                        box-shadow: 0 0 7px #fff;
+                    }
+
+/*------------------------------------------------------------Item Option Selecting-------------------------------------------------------------*/
+
+.item_option_selections{
+    width: 66%;
+    display: flex;
+    margin-left: 24%;
+}
+
+    .options_Selection{
+        padding: 6px;
+        margin-left: 66px;
+        margin-top: 2%;
+    }
+
+        .option_image{
+            width: 55px;
+            margin-left: 6px;
+            height: 49px;
+            border: 4px solid white;
+            box-shadow: 0 0 8px black;
+            background: linear-gradient(316deg, #f94327 0%, #ff7d14 74%);
+            border-radius: 15px;
+        }
+
+            .option_image:hover{
+                transition-duration: 0.3s;
+                transition-delay: 0.2ms;
+                margin-top: -4px;
+            }
+
+                .option_name{
+                    width: 100%;
+                    text-align: center;
+                    font-size: 14px;
+                    font-weight: 800;
+                    letter-spacing: 1px;
+                }
+
+
+/*------------------------------------------------------------------------item_styling----------------------------------------------------------*/
+.category_row_type{
+    text-align: center;
+    width: 100%;
+    padding: 16px;
+    font-size: 33px;
+    font-family: monospace;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-shadow: 2px 0px red;
+    color: yellow;
+    letter-spacing: 2px;
+    margin-top: 17px;
+}
+.item_section{
+    display: flex;
+    margin-top: 2%;
+    width: 100%;
+    height: 375px;
+    margin-bottom: 2%;
+    background-color: #d9d9d9;
+    background-image: linear-gradient(315deg, #d9d9d9 0%, #f6f2f2 74%);
+    border-radius: 264px;
+    box-shadow: 0 6px 9px black;
+}
+
+        .item_content{
+            width: 20%;
+            margin-left: 4.1%;
+            padding: 1%;
+            box-shadow: 1px 9px 8px black;
+            background: linear-gradient(316deg, #f94327 0%, #ff7d14 74%);
+            border-radius: 33px;
+        }
+
+            .item_image_div{
+                height: 155px;
+            }
+
+                .item_image{
+                    width: 100%;
+                    height: 153px;
+                    box-shadow: 0 0 8px black;
+                    border-top-left-radius: 25px;
+                    border-top-right-radius: 25px;
+                }
+
+                    .item_image:hover{
+                        transition-duration: 0.5s;
+                        transition-delay: 0.2ms;
+                        margin-top: -8px;
+                    }
+
+                        .item_name_div{
+                            margin-top: 5px;
+                            width: auto;
+                            display: flex;
+                            font-size: 18px;
+                            color: white;
+                            font-weight: 700;
+                        }
+
+                            .item_description_div{
+                                margin-top: 5px;
+                                text-align: left;
+                                font-family: system-ui;
+                                font-size: 15px;
+                                height: 56px;
+                            }
+
+                                .item_description{
+                                    margin-top: -3px;
+                                    font-weight: 600;
+                                }
+
+                                    .item_price_div{
+                                        margin-top: -9px;
+                                        color: darkred;
+                                    }
+
+                                        .item_price{
+                                            font-weight: 700;
+                                        }
+
+                                            .item_content_buttons{
+                                                width: 100%;
+                                                display: grid;
+                                                margin-top: 3px;
+                                            }
+
+                                                .itembtn1{
+                                                    width: 100%;
+                                                    height: 40px;
+                                                    margin-top: 6px;
+                                                    padding: 7px;
+                                                    font-weight: 900;
+                                                    box-shadow:  0px 0px 8px black;
+                                                    background:linear-gradient(to right, #ff00cc, #333399);
+                                                }
+
+/*--------------------------------------------------------About_page_Styling--------------------------------------------------------------------*/
+
+.about {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin-top: 3%;
+    margin-bottom: 3%;
+}
+
+    .owner{
+        width: 100%;
+        display: flex;
+    }
+
+        .owner img {
+            border-radius: 50%;
+            width: 184px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            height: 158px;
+            margin-left: 124px;
+        }
+
+            .name{
+                font-size: 27px;
+                margin-bottom: 10px;
+                margin-left: 24px;
+                margin-top: 19px;
+                color: #f94327;
+                text-transform: uppercase;
+            }
+
+                .position {
+                    font-size: 1.2em;
+                    color: #777;
+                    margin-bottom: 40px;
+                    margin-top: 56px;
+                    margin-left: -325px;
+                }
+
+                    .info_title{
+                        margin-bottom: 20px;
+                        text-transform: uppercase;
+                        color: #f94327;
+                    }
+
+                        .info_description{
+                            font-size: 1.2em;
+                            color: #555;
+                            margin-bottom: 30px; 
+                        }
+
+                        /*award_Winning*/
+
+                        .award_section_title{
+                            width: 20%;
+                            padding: 7px;
+                            margin-top: -15px;
+                            text-align: center;
+                            font-size: 29px;
+                            color: #f94327;
+                            margin-left: 41%;
+                            text-transform: uppercase;
+                        }
+
+                            .awards{
+                                width: 96%;
+                                display: flex;
+                                margin-left: 4%;
+                                margin-bottom: 2%;
+                            }
+
+                                .award{
+                                    width: 14%;
+                                    margin-left: 8%;
+                                    display: inline-grid;
+                                }
+
+                                    .award_image {
+                                        width: 48%;
+                                        margin: 10px;
+                                        border-radius: 10px;
+                                        height: 158px;
+                                        display: grid;
+                                        margin-left: 56px;
+                                    }
+
+                                        .award_win_year{
+                                            text-align: center;
+                                            font-weight: 700;
+                                            font-size: larger;
+                                            padding: 5px;
+                                        }
+
+                                            .award_details{
+                                                width: 100%;
+                                                text-align: center;
+                                                font-size: 18px;
+                                                font-weight: 700;
+                                                font-family: system-ui;
+                                                letter-spacing: 1px;
+                                            }
+
+
+
+/*-----------------------------------------------------------------Css for Footer----------------------------------------------------------------*/
+
+footer {
+    background-color: #f2f2f2;
+    padding: 20px;
+    text-align: center;
+    margin-top: auto;
+    box-shadow: 0 0 7px black;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .footer_logo_link_to_homepage{
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  .footer_logo{
+    color: #666;
+    margin-top: 11px;
+    font-weight: 800;
+    letter-spacing: 1px;
+  }
+
+
+  .footer_logo:hover{
+        color: #f94327;
+        transition-duration: 0.3s;
+        transition-delay: 0.3ms;
+  }
+
+  
+  
+  footer p {
+    font-family: sans-serif;
+    font-size: 14px;
+    color: #666;
+    margin: 0;
+    margin-top: 18px;
+  }
+
+  .social_logos_link_to_social_pages{
+    cursor: pointer;
+  }
+  
+  .social_logo_image{
+    width: 45px;
+    background: black;
+    border-radius: 52px;
+    box-shadow: 0 0 8px black;
+    margin-left: 9px;
+  }
+
+  .social_logo_image:hover{
+    background-color: #f94327;
+    transition-duration: 0.3s;
+    transition-delay: 0.3ms;
+  }
+
+
+
+
+
+
+
+
